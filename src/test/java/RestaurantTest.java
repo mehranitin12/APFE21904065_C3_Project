@@ -6,13 +6,15 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 class RestaurantTest {
 
-Restaurant restaurant = Mockito.mock(Restaurant.class);
+    Restaurant restaurant = Mockito.mock(Restaurant.class);
 
     //REFACTOR ALL THE REPEATED LINES OF CODE
 
@@ -91,4 +93,14 @@ Restaurant restaurant = Mockito.mock(Restaurant.class);
                 () -> restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    @Test
+    public void should_return_the_total_order_value_of_all_the_items_in_the_menu() {
+        newRestaurantCreation();
+
+        List<Item> totalAmount = new ArrayList<Item>();
+        totalAmount = restaurant.getMenu();
+        assertEquals(388, restaurant.getOrderValue(totalAmount));
+
+    }
 }

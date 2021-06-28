@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Restaurant_project -Student version" />
+        <module name="APFE21904065_C3_Project" />
         <module name="Restaurant_project" />
       </profile>
     </annotationProcessing>
