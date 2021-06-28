@@ -96,6 +96,7 @@ class RestaurantTest {
 
     @Test
     public void should_return_the_total_order_value_of_all_the_items_in_the_menu() {
+
         newRestaurantCreation();
 
         List<Item> totalAmount = new ArrayList<Item>();
